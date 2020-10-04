@@ -11,6 +11,4 @@ public class Draggable : MonoBehaviour, IDragHandler
         transform.position = Input.mousePosition;
     }
 
-
-
 }
