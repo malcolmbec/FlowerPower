@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2130504945135243780}
   m_Layer: 0
   m_Name: Monstera
-  m_TagString: Untagged
+  m_TagString: Flower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

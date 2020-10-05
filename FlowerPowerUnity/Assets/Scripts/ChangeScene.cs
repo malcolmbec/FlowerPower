@@ -9,6 +9,7 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("ShopScene");
         //SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(0));
+        GeneralManager.Gm.checkForLoadedScene = true;
     }
 
     public void GoToFlower()
