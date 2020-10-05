@@ -10,4 +10,10 @@ public class Flowers : MonoBehaviour
     {
         flowers = new List<GameObject>();
     }
+
+    public void DuplicateFlowersForUnloading()
+    {
+        GameObject duplicateFlowers = Instantiate(gameObject, GeneralManager.Gm.gameObject.transform);
+        GeneralManager.Gm.currentFlowers = duplicateFlowers;
+    }
 }

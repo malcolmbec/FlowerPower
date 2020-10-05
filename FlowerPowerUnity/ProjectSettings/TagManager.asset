@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ShopScene
+  - FlowerScene
+  - SpeechBubble
+  - Canvas
+  - GoToFlowerButton
+  - GoToShopButton
+  - ChangeScene
+  - Flower
+  - Vase_Clay
+  - Vase_White
+  - Vase_Position
   layers:
   - Default
   - TransparentFX
