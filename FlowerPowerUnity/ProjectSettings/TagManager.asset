@@ -16,6 +16,8 @@ TagManager:
   - Vase_White
   - Vase_Position
   - Trash
+  - ShopRunner
+  - FlowerRunner
   layers:
   - Default
   - TransparentFX

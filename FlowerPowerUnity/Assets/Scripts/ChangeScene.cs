@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 public class ChangeScene : MonoBehaviour
 {
@@ -30,6 +31,13 @@ public class ChangeScene : MonoBehaviour
             //We have to set the onClick events in code, since they won't have a reference to the Manager
             GoToShopButton = GameObject.FindGameObjectWithTag("GoToShopButton");
             GoToShopButton.GetComponent<Button>().onClick.AddListener(GoToShop);
+
+
+            //We should have loaded flower scene by now.
+            ShopScene.SetActive(false);
+            GameObject.FindGameObjectWithTag("FlowerRunner").GetComponent<DialogueRunner>().startNode = GeneralManager.Gm.currentNode.ToString();
+
+        
         }
     }
 
@@ -50,8 +58,7 @@ public class ChangeScene : MonoBehaviour
         
         //We should check to make sure scene is loaded, but for now, we're gonna assume it
         DisableShopTextBoxAndButton();
-        ShopScene.SetActive(false);
-
+        
         //SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));   
     }
 

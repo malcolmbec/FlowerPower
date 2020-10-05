@@ -3998,10 +3998,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2480198943629176163, guid: fcb2e2810af31104d8a731a1ca1ab855,
         type: 3}
+    - target: {fileID: 623427568123806547, guid: b9e151ceebe018e469655fb474beb196,
+        type: 3}
+      propertyPath: startNode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 623427568123806547, guid: b9e151ceebe018e469655fb474beb196,
+        type: 3}
+      propertyPath: startAutomatically
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 623427568123806548, guid: b9e151ceebe018e469655fb474beb196,
         type: 3}
       propertyPath: m_Name
       value: DialogueRunner
+      objectReference: {fileID: 0}
+    - target: {fileID: 623427568123806548, guid: b9e151ceebe018e469655fb474beb196,
+        type: 3}
+      propertyPath: m_TagString
+      value: FlowerRunner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9e151ceebe018e469655fb474beb196, type: 3}
