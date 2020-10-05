@@ -6,6 +6,15 @@ TagManager:
   tags:
   - ShopScene
   - FlowerScene
+  - SpeechBubble
+  - Canvas
+  - GoToFlowerButton
+  - GoToShopButton
+  - ChangeScene
+  - Flower
+  - Vase_Clay
+  - Vase_White
+  - Vase_Position
   layers:
   - Default
   - TransparentFX

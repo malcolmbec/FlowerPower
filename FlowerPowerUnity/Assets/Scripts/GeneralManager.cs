@@ -18,7 +18,9 @@ public class GeneralManager : MonoBehaviour
     public GameObject currentFlowers;
     public GameObject vase;
 
+    public bool changedSceneToShop;
 
+    public ChangeScene cs;
 
     void Awake() {
         if (_gm != null && _gm != this) {
@@ -28,6 +30,41 @@ public class GeneralManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
+    }
+    void Start()
+    {
+        //Get ref to ChangeScene
+        cs = GameObject.FindGameObjectWithTag("ChangeScene").GetComponent<ChangeScene>();
+    }
+
+
+    void Update()
+    {
+        if(changedSceneToShop)
+        {   
+            changedSceneToShop = false;
+            ResetListForFlowers();
+            //Set flowers into vase...            
+            currentFlowers.transform.parent = GameObject.FindGameObjectWithTag("Vase_Position").transform;
+            currentFlowers.transform.localScale = new Vector3(1,1,1);
+            currentFlowers.transform.localPosition = Vector3.zero;
+        }
+    }
+
+    void ResetListForFlowers()
+    {
+        //Don't know why there are fake flowers inside here...
+        currentFlowers.GetComponent<Flowers>().flowers = new List<GameObject> (GameObject.FindGameObjectsWithTag("Flower"));
+    }
+
+    void DestroyFlowersForReset()
+    {
+
+    }
+
+    public void SetupFlowerShopButton()
+    {
+        cs.SetupFlowerButton();
     }
 
 }
