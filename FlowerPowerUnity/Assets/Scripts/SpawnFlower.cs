@@ -9,7 +9,7 @@ public class SpawnFlower : MonoBehaviour
 
     public void SpawnFlowerOnClick()
     {
-        Debug.Log("Flower!");
+        Debug.Log("Spawn " + flowerPrefab.name + "!");
 
         if(flowerPrefab != null)
         {

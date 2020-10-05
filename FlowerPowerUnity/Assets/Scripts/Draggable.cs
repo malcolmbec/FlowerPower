@@ -3,12 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Draggable : MonoBehaviour, IDragHandler
+public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler
 {
+    public GameObject trashcan;
+
+    private void Awake()
+    {
+        trashcan = GameObject.FindGameObjectWithTag("Trash");
+    }
 
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        if (overlap(GetComponent<RectTransform>(), trashcan.GetComponent<RectTransform>()))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private bool overlap(RectTransform rect1, RectTransform rect2)
