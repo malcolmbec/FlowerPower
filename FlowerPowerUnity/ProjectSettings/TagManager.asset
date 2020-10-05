@@ -15,6 +15,7 @@ TagManager:
   - Vase_Clay
   - Vase_White
   - Vase_Position
+  - Trash
   layers:
   - Default
   - TransparentFX
