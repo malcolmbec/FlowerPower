@@ -14,7 +14,7 @@ public class GeneralManager : MonoBehaviour
 
     public static GeneralManager Gm {get { return _gm; }}
 
-    //public GameObject currentPatron;
+
     public GameObject currentFlowers;
     public GameObject vase;
 
@@ -29,6 +29,8 @@ public class GeneralManager : MonoBehaviour
     //Animator Information
     public bool CharacterHasEnteredScene;
 
+
+    public GameObject character; 
 
     void Awake() {
         if (_gm != null && _gm != this) {
@@ -62,7 +64,9 @@ public class GeneralManager : MonoBehaviour
             shop_dR = GameObject.FindGameObjectWithTag("ShopRunner").GetComponent<DialogueRunner>();
             //have it say thank you...
             shop_dR.StartDialogue("ThankYou");
-           
+
+            character = GameObject.FindGameObjectWithTag("Character"); 
+            character.GetComponent<Character>().SetCharacterToExit();
         }
 
 
@@ -96,6 +100,12 @@ public class GeneralManager : MonoBehaviour
         //Currently just add 1 to current Node;
 
         currentNode += 1;
+    }
+
+    public void ChangeCharacter()
+    {
+        character.SetActive(false);
+        character.SetActive(true);
     }
 
 }

@@ -18,6 +18,7 @@ TagManager:
   - Trash
   - ShopRunner
   - FlowerRunner
+  - Character
   layers:
   - Default
   - TransparentFX
