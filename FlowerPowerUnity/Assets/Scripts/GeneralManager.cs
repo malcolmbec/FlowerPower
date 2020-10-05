@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Yarn.Unity;
 
 //usage:
 public class GeneralManager : MonoBehaviour
@@ -24,6 +24,12 @@ public class GeneralManager : MonoBehaviour
 
     public int currentNode;
 
+    public DialogueRunner shop_dR;
+
+    //Animator Information
+    public bool CharacterHasEnteredScene;
+
+
     void Awake() {
         if (_gm != null && _gm != this) {
             Destroy(this.gameObject);
@@ -37,6 +43,7 @@ public class GeneralManager : MonoBehaviour
     {
         //Get ref to ChangeScene
         cs = GameObject.FindGameObjectWithTag("ChangeScene").GetComponent<ChangeScene>();
+        currentNode = 1;
     }
 
 
@@ -50,7 +57,15 @@ public class GeneralManager : MonoBehaviour
             currentFlowers.transform.parent = GameObject.FindGameObjectWithTag("Vase_Position").transform;
             currentFlowers.transform.localScale = new Vector3(1,1,1);
             currentFlowers.transform.localPosition = Vector3.zero;
+        
+            //Should do this somewhere else...
+            shop_dR = GameObject.FindGameObjectWithTag("ShopRunner").GetComponent<DialogueRunner>();
+            //have it say thank you...
+            shop_dR.StartDialogue("ThankYou");
+           
         }
+
+
     }
 
     void ResetListForFlowers()
@@ -61,12 +76,26 @@ public class GeneralManager : MonoBehaviour
 
     void DestroyFlowersForReset()
     {
+        //Okay we should now destroy the flowers...
 
+        foreach(var flower in currentFlowers.GetComponent<Flowers>().flowers)
+        {
+            Destroy(flower);
+        }
+
+        Destroy(currentFlowers);
     }
 
     public void SetupFlowerShopButton()
     {
         cs.SetupFlowerButton();
+    }
+
+    public void ChangeCurrentNode()
+    {
+        //Currently just add 1 to current Node;
+
+        currentNode += 1;
     }
 
 }

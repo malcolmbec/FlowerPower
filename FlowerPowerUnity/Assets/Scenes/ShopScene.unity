@@ -1003,6 +1003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubble: {fileID: 598831815}
   dR: {fileID: 542651825}
+  animator: {fileID: 1118822174}
 --- !u!1 &1412345494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,6 +1622,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogueRunner
+      objectReference: {fileID: 0}
+    - target: {fileID: 623427568123806548, guid: b9e151ceebe018e469655fb474beb196,
+        type: 3}
+      propertyPath: m_TagString
+      value: ShopRunner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9e151ceebe018e469655fb474beb196, type: 3}
