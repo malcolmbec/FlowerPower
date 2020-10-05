@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 public class Character : MonoBehaviour
@@ -11,6 +12,16 @@ public class Character : MonoBehaviour
 
     public bool currentEntered;
 
+    public List<Sprite> characterSprites;
+
+    private Image img;
+    
+    public int idx = 0;
+
+    private void Awake()
+    {
+        img = GetComponent<Image>();
+    }
     public void ActivateSpeech()
     {
 
@@ -42,6 +53,7 @@ public class Character : MonoBehaviour
         animator.SetBool("ShouldExitScene", false);
         speechBubble.SetActive(false);
 
+        ChangeSprite();
         //jesus okay
         currentEntered = false;
         GeneralManager.Gm.ChangeCharacter();
@@ -56,5 +68,15 @@ public class Character : MonoBehaviour
     public void SetCharacterToExit()
     {
         animator.SetBool("ShouldExitScene", true);
+    }
+
+    public void ChangeSprite()
+    {
+        idx += 1;
+        if (idx > characterSprites.Count - 1)
+        {
+            idx = 0;
+        }
+        img.sprite = characterSprites[idx];
     }
 }

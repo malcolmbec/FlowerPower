@@ -1004,6 +1004,13 @@ MonoBehaviour:
   speechBubble: {fileID: 598831815}
   dR: {fileID: 542651825}
   animator: {fileID: 1118822174}
+  currentEntered: 0
+  characterSprites:
+  - {fileID: 21300000, guid: 36ffe517d200c8947904df5b3b0d05a4, type: 3}
+  - {fileID: 21300000, guid: ab9cc38b7eaf7e845870c9a2818265eb, type: 3}
+  - {fileID: 21300000, guid: 193e27e09f9a8734484994b22cff1885, type: 3}
+  - {fileID: 21300000, guid: ac3ea645a2d98594b98dfcf522a14883, type: 3}
+  idx: 0
 --- !u!1 &1412345494
 GameObject:
   m_ObjectHideFlags: 0
