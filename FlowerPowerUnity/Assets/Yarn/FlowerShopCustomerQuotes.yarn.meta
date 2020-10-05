@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 00baea55aa6ee634d84749fc2a2f3083
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - FlowerShopCustomerQuotes-Start-0
+  - FlowerShopCustomerQuotes-Start-1
+  - FlowerShopCustomerQuotes-Start-2
+  - FlowerShopCustomerQuotes-Start-3
+  - FlowerShopCustomerQuotes-Start-4
+  - FlowerShopCustomerQuotes-Start-5
+  - FlowerShopCustomerQuotes-Start-6
+  - FlowerShopCustomerQuotes-Start-7
+  - FlowerShopCustomerQuotes-Start-8
+  - FlowerShopCustomerQuotes-Start-9
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 00baea55aa6ee634d84749fc2a2f3083,
+    type: 3}
+  localizations: []
