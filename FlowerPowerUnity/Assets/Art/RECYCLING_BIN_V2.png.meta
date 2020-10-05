@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0f2a6e62f0780e64eaf9a08c6476a36e
+guid: 38b29f43fd6baf7459902dbf09a5012a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1995058754656562462
-    second: 311_speechbubblenoarrow_0
+      213: 6048390656529807739
+    second: RECYCLING_BIN_V2_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,13 +114,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 311_speechbubblenoarrow_0
+      name: RECYCLING_BIN_V2_0
       rect:
         serializedVersion: 2
-        x: 127
-        y: 130
-        width: 1016
-        height: 625
+        x: 47
+        y: 70
+        width: 550
+        height: 623
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1d6659fd5fdfab10800000000000000
-      internalID: 1995058754656562462
+      spriteID: b793041a14330f350800000000000000
+      internalID: 6048390656529807739
       vertices: []
       indices: 
       edges: []
