@@ -10,26 +10,16 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-US
   stringIDs:
-  - FlowerShopCustNotes-Start-0
-  - FlowerShopCustNotes-Start-1
-  - FlowerShopCustNotes-Start-2
-  - FlowerShopCustNotes-Start-3
-  - FlowerShopCustNotes-Start-4
-  - FlowerShopCustNotes-Start-5
-  - FlowerShopCustNotes-Start-6
-  - FlowerShopCustNotes-Start-7
-  - FlowerShopCustNotes-Start-8
-  - FlowerShopCustNotes-Start-9
-  - FlowerShopCustNotes-Start-10
-  - FlowerShopCustNotes-Start-11
-  - FlowerShopCustNotes-Start-12
-  - FlowerShopCustNotes-Start-13
-  - FlowerShopCustNotes-Start-14
-  - FlowerShopCustNotes-Start-15
-  - FlowerShopCustNotes-Start-16
-  - FlowerShopCustNotes-Start-17
-  - FlowerShopCustNotes-Start-18
-  - FlowerShopCustNotes-Start-19
+  - FlowerShopCustNotes-1-0
+  - FlowerShopCustNotes-2-1
+  - FlowerShopCustNotes-3-2
+  - FlowerShopCustNotes-4-3
+  - FlowerShopCustNotes-5-4
+  - FlowerShopCustNotes-6-5
+  - FlowerShopCustNotes-7-6
+  - FlowerShopCustNotes-8-7
+  - FlowerShopCustNotes-9-8
+  - FlowerShopCustNotes-10-9
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 

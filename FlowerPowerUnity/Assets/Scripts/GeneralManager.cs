@@ -22,6 +22,8 @@ public class GeneralManager : MonoBehaviour
 
     public ChangeScene cs;
 
+    public int currentNode;
+
     void Awake() {
         if (_gm != null && _gm != this) {
             Destroy(this.gameObject);

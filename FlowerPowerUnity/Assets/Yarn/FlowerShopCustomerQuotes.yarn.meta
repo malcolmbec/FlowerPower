@@ -10,16 +10,16 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-US
   stringIDs:
-  - FlowerShopCustomerQuotes-Start-0
-  - FlowerShopCustomerQuotes-Start-1
-  - FlowerShopCustomerQuotes-Start-2
-  - FlowerShopCustomerQuotes-Start-3
-  - FlowerShopCustomerQuotes-Start-4
-  - FlowerShopCustomerQuotes-Start-5
-  - FlowerShopCustomerQuotes-Start-6
-  - FlowerShopCustomerQuotes-Start-7
-  - FlowerShopCustomerQuotes-Start-8
-  - FlowerShopCustomerQuotes-Start-9
+  - FlowerShopCustomerQuotes-1-0
+  - FlowerShopCustomerQuotes-2-1
+  - FlowerShopCustomerQuotes-3-2
+  - FlowerShopCustomerQuotes-4-3
+  - FlowerShopCustomerQuotes-5-4
+  - FlowerShopCustomerQuotes-6-5
+  - FlowerShopCustomerQuotes-7-6
+  - FlowerShopCustomerQuotes-8-7
+  - FlowerShopCustomerQuotes-9-8
+  - FlowerShopCustomerQuotes-10-9
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
