@@ -15,7 +15,9 @@ public class Flowers : MonoBehaviour
     {
         foreach(var flower in flowers)
         {
-            flower.GetComponent<Draggable>().enabled = false;
+           if(flower != null) {
+                flower.GetComponent<Draggable>().enabled = false;
+            }
         }
         GameObject duplicateFlowers = Instantiate(gameObject, GeneralManager.Gm.gameObject.transform);
         
