@@ -76,8 +76,12 @@ public class GeneralManager : MonoBehaviour
             //have it say thank you...
             shop_dR.StartDialogue("ThankYou");
 
-            character = GameObject.FindGameObjectWithTag("Character"); 
+            character = GameObject.FindGameObjectWithTag("Character");
+            vase.transform.parent = character.transform;
+            GameObject.FindGameObjectWithTag("Vase_Position").transform.parent = character.transform;
+
             character.GetComponent<Character>().SetCharacterToExit();
+           
         }
 
         if(changedSceneToFlowers)

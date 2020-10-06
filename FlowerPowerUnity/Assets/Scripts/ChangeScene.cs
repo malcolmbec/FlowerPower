@@ -85,5 +85,6 @@ public class ChangeScene : MonoBehaviour
     
         SpeechBubble = GameObject.FindGameObjectWithTag("SpeechBubble");
     }
+    
 
 }
