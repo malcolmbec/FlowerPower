@@ -60,7 +60,9 @@ public class ChangeScene : MonoBehaviour
     }
 
     public void GoToFlower()
-    {
+    {   
+        GeneralManager.Gm.ResetVasePositions();
+        
         SceneManager.LoadScene("FlowerScene", LoadSceneMode.Additive);
         
         //We should check to make sure scene is loaded, but for now, we're gonna assume it

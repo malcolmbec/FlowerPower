@@ -32,6 +32,13 @@ public class GeneralManager : MonoBehaviour
 
     public int currentVase;
 
+    public GameObject orig_VasePosition;
+    public GameObject orig_FlowerPosition;
+
+    public GameObject canvas;
+
+
+
 
     public GameObject character; 
 
@@ -59,6 +66,11 @@ public class GeneralManager : MonoBehaviour
     {
         if(changedSceneToShop)
         {   
+            
+            //These tags are not the best descriptors 000ps
+            
+
+
             changedSceneToShop = false;
             ResetListForFlowers();
             //Set flowers into vase...   
@@ -77,11 +89,12 @@ public class GeneralManager : MonoBehaviour
             shop_dR.StartDialogue("ThankYou");
 
             character = GameObject.FindGameObjectWithTag("Character");
-            vase.transform.parent = character.transform;
-            GameObject.FindGameObjectWithTag("Vase_Position").transform.parent = character.transform;
-
+            GameObject.FindGameObjectWithTag("Vase_Position").transform.SetParent(character.transform, true);
+            vase.transform.SetParent(character.transform, true);
+            
             character.GetComponent<Character>().SetCharacterToExit();
            
+            
         }
 
         if(changedSceneToFlowers)
@@ -89,6 +102,8 @@ public class GeneralManager : MonoBehaviour
             changedSceneToFlowers = false;
 
             DestroyFlowersForReset();
+
+            
         }
 
     }
@@ -128,8 +143,25 @@ public class GeneralManager : MonoBehaviour
 
     public void ChangeCharacter()
     {
+        var Offscreen = GameObject.FindGameObjectWithTag("Offscreen");
+        GameObject.FindGameObjectWithTag("Vase_Position").transform.SetParent(Offscreen.transform, false);
+        GameObject.FindGameObjectWithTag("Vase_White").transform.SetParent(Offscreen.transform, false);
         character.SetActive(false);
         character.SetActive(true);
+    }
+
+    public void ResetVasePositions()
+    {  
+        orig_VasePosition = GameObject.FindGameObjectWithTag("Vase_Clay");
+        orig_FlowerPosition = GameObject.FindGameObjectWithTag("Vase_OG");
+        canvas = GameObject.FindGameObjectWithTag("Canvas");
+
+
+        GameObject.FindGameObjectWithTag("Vase_Position").transform.SetParent(canvas.transform, false);
+        GameObject.FindGameObjectWithTag("Vase_White").transform.SetParent(canvas.transform, false);
+
+        GameObject.FindGameObjectWithTag("Vase_Position").transform.position = orig_FlowerPosition.transform.position;
+        GameObject.FindGameObjectWithTag("Vase_White").transform.position = orig_VasePosition.transform.position;
     }
 
 }
