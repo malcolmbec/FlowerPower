@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
     public bool currentEntered;
 
     public List<Sprite> characterSprites;
+    public List<Sprite> ShuffledSprites;
 
     private Image img;
     

@@ -19,6 +19,8 @@ TagManager:
   - ShopRunner
   - FlowerRunner
   - Character
+  - Vase_OG
+  - Offscreen
   layers:
   - Default
   - TransparentFX

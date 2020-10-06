@@ -18,6 +18,11 @@ public class ChangeScene : MonoBehaviour
     }
 
 
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneChange;
+    }
+
     public void OnSceneChange(Scene scene, LoadSceneMode mode)
     {
         
@@ -28,6 +33,8 @@ public class ChangeScene : MonoBehaviour
         }
         else if (scene.name == "FlowerScene")
         {
+            GeneralManager.Gm.changedSceneToFlowers = true;
+
             //We have to set the onClick events in code, since they won't have a reference to the Manager
             GoToShopButton = GameObject.FindGameObjectWithTag("GoToShopButton");
             GoToShopButton.GetComponent<Button>().onClick.AddListener(GoToShop);
@@ -53,7 +60,9 @@ public class ChangeScene : MonoBehaviour
     }
 
     public void GoToFlower()
-    {
+    {   
+        GeneralManager.Gm.ResetVasePositions();
+        
         SceneManager.LoadScene("FlowerScene", LoadSceneMode.Additive);
         
         //We should check to make sure scene is loaded, but for now, we're gonna assume it
@@ -78,5 +87,6 @@ public class ChangeScene : MonoBehaviour
     
         SpeechBubble = GameObject.FindGameObjectWithTag("SpeechBubble");
     }
+    
 
 }

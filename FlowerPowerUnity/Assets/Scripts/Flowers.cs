@@ -13,7 +13,14 @@ public class Flowers : MonoBehaviour
 
     public void DuplicateFlowersForUnloading()
     {
+        foreach(var flower in flowers)
+        {
+            flower.GetComponent<Draggable>().enabled = false;
+        }
         GameObject duplicateFlowers = Instantiate(gameObject, GeneralManager.Gm.gameObject.transform);
+        
         GeneralManager.Gm.currentFlowers = duplicateFlowers;
+
+        
     }
 }
