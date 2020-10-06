@@ -19,6 +19,7 @@ public class GeneralManager : MonoBehaviour
     public GameObject vase;
 
     public bool changedSceneToShop;
+    public bool changedSceneToFlowers;
 
     public ChangeScene cs;
 
@@ -28,6 +29,8 @@ public class GeneralManager : MonoBehaviour
 
     //Animator Information
     public bool CharacterHasEnteredScene;
+
+    public int currentVase;
 
 
     public GameObject character; 
@@ -46,6 +49,9 @@ public class GeneralManager : MonoBehaviour
         //Get ref to ChangeScene
         cs = GameObject.FindGameObjectWithTag("ChangeScene").GetComponent<ChangeScene>();
         currentNode = 1;
+
+        currentVase = 0;
+
     }
 
 
@@ -55,11 +61,16 @@ public class GeneralManager : MonoBehaviour
         {   
             changedSceneToShop = false;
             ResetListForFlowers();
-            //Set flowers into vase...            
+            //Set flowers into vase...   
+
+            vase = GameObject.FindGameObjectWithTag("Vase_White");
+            vase.GetComponent<ChangeVase>().SetSpriteFromGeneral();
+                     
             currentFlowers.transform.parent = GameObject.FindGameObjectWithTag("Vase_Position").transform;
             currentFlowers.transform.localScale = new Vector3(1,1,1);
             currentFlowers.transform.localPosition = Vector3.zero;
-        
+
+           
             //Should do this somewhere else...
             shop_dR = GameObject.FindGameObjectWithTag("ShopRunner").GetComponent<DialogueRunner>();
             //have it say thank you...
@@ -69,6 +80,12 @@ public class GeneralManager : MonoBehaviour
             character.GetComponent<Character>().SetCharacterToExit();
         }
 
+        if(changedSceneToFlowers)
+        {
+            changedSceneToFlowers = false;
+
+            DestroyFlowersForReset();
+        }
 
     }
 
@@ -81,13 +98,16 @@ public class GeneralManager : MonoBehaviour
     void DestroyFlowersForReset()
     {
         //Okay we should now destroy the flowers...
-
-        foreach(var flower in currentFlowers.GetComponent<Flowers>().flowers)
+        if(currentFlowers != null)
         {
-            Destroy(flower);
+            foreach(var flower in currentFlowers.GetComponent<Flowers>().flowers)
+            {
+                Destroy(flower);
+            }
+        
+            Destroy(currentFlowers);
         }
-
-        Destroy(currentFlowers);
+       
     }
 
     public void SetupFlowerShopButton()

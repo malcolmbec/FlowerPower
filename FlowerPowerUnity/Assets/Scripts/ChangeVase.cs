@@ -27,6 +27,12 @@ public class ChangeVase : MonoBehaviour, IPointerClickHandler
         {
             idx = 0;
         }
+        GeneralManager.Gm.currentVase = idx;
         img.sprite = vaseSprites[idx];
+    }
+
+    public void SetSpriteFromGeneral()
+    {   
+        img.sprite = vaseSprites[GeneralManager.Gm.currentVase];
     }
 }

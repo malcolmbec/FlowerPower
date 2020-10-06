@@ -18,6 +18,11 @@ public class ChangeScene : MonoBehaviour
     }
 
 
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneChange;
+    }
+
     public void OnSceneChange(Scene scene, LoadSceneMode mode)
     {
         
@@ -28,6 +33,8 @@ public class ChangeScene : MonoBehaviour
         }
         else if (scene.name == "FlowerScene")
         {
+            GeneralManager.Gm.changedSceneToFlowers = true;
+
             //We have to set the onClick events in code, since they won't have a reference to the Manager
             GoToShopButton = GameObject.FindGameObjectWithTag("GoToShopButton");
             GoToShopButton.GetComponent<Button>().onClick.AddListener(GoToShop);
