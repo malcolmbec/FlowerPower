@@ -23,6 +23,5 @@ public class Flowers : MonoBehaviour
         
         GeneralManager.Gm.currentFlowers = duplicateFlowers;
 
-        
     }
 }

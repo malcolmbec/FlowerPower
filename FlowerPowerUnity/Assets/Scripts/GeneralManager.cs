@@ -37,6 +37,7 @@ public class GeneralManager : MonoBehaviour
 
     public GameObject canvas;
 
+    public bool canEscapeToQuit;
 
 
 
@@ -59,11 +60,23 @@ public class GeneralManager : MonoBehaviour
 
         currentVase = 0;
 
+        canEscapeToQuit = true;
+
+        #if UNITY_WEBGL
+            canEscapeToQuit = false;
+        #endif
+
     }
 
 
     void Update()
     {
+
+        if(canEscapeToQuit && Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         if(changedSceneToShop)
         {   
             
