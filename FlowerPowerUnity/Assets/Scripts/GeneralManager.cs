@@ -139,6 +139,9 @@ public class GeneralManager : MonoBehaviour
         //Currently just add 1 to current Node;
 
         currentNode += 1;
+        if(currentNode > 10){
+            currentNode = 1;
+        }
     }
 
     public void ChangeCharacter()
